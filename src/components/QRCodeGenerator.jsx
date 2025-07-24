@@ -11,7 +11,7 @@ const QRCodeGenerator = () => {
       const res = await axios.post("http://localhost:5000/api/scan");
       console.log("Scan recorded:", res.data);
       setScanRecorded(true);
-      fetchStats(); // Fetch updated stats after recording
+      fetchStats();
     } catch (error) {
       console.error("Error recording scan:", error);
     }
@@ -33,7 +33,11 @@ const QRCodeGenerator = () => {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <QRCodeCanvas value="https://your-ar-link.com" size={200} />
+      <QRCodeCanvas
+        value="https://www.youtube.com/embed/I-LzAtjf1DA?autoplay=1"
+        size={200}
+      />
+
       {/* <button
         onClick={recordScan}
         className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"

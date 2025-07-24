@@ -7,6 +7,11 @@ import { recordScan, getStats } from "../controllers/scanController.js";
 router.post("/scan", recordScan);
 router.get("/stats", getStats);
 
+router.post("/scan", recordScan);
+
+
+
+
 // await axios.post("/api/scan",recordScan);
 // await axios.get("/api/stats", getStats);
 export default router;
